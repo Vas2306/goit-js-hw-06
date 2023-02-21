@@ -1,43 +1,13 @@
-console.log(
-  `Number of categories: ${
-    document.querySelector("#categories").children.length
-  }`
-);
+const listCategories = document.querySelector("#categories");
+const itemsInCategories = document.querySelectorAll(".item");
 
-console.log(
-  `Category: ${document.querySelector(".item").firstElementChild.textContent}`
-);
+console.log(`Number of categories: ${itemsInCategories.length}`);
 
-console.log(
-  `Elements: ${
-    document.querySelector(".item").lastElementChild.children.length
-  }`
-);
-
-console.log(
-  `Category: ${
-    document.querySelector(".item").nextElementSibling.firstElementChild
-      .textContent
-  }`
-);
-
-console.log(
-  `Elements: ${
-    document.querySelector(".item").nextElementSibling.lastElementChild.children
-      .length
-  }`
-);
-
-console.log(
-  `Category: ${
-    document.querySelector(".item").nextElementSibling.nextElementSibling
-      .firstElementChild.textContent
-  }`
-);
-
-console.log(
-  `Elements: ${
-    document.querySelector(".item").nextElementSibling.nextElementSibling
-      .lastElementChild.children.length
-  }`
-);
+for (let i = 0; i < itemsInCategories.length; i += 1) {
+  console.log(
+    `Category: ${itemsInCategories[i].querySelector("h2").textContent}`
+  );
+  console.log(
+    `Elements: ${itemsInCategories[i].querySelectorAll("li").length}`
+  );
+}
