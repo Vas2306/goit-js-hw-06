@@ -19,7 +19,7 @@ const listGallery = document.querySelector(".gallery");
 const makeImageGallery = (element) => {
   const { url, alt } = element;
   return `
-<li><img src="${url}" alt="${alt}"></li>
+<li><img src="${url}" height="250" width="375" alt="${alt}"></li>
 `;
 };
 const imageGallery = images.map(makeImageGallery).join("");
