@@ -3,7 +3,7 @@ const refs = {
   inputEl: document.querySelector("#font-size-control"),
 };
 
-refs.inputEl.addEventListener("change", changeFontSize);
+refs.inputEl.addEventListener("input", changeFontSize);
 
 function changeFontSize() {
   const size = refs.inputEl.value;
